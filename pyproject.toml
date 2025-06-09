@@ -1,0 +1,25 @@
+[project]
+name = "osagyefo-ai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai",
+    "langchain",
+    "langchain-community",
+    "sentence-transformers",
+    "chromadb",
+    "fastapi",
+    "uvicorn[standard]",
+    "sqlalchemy",
+    "chromadb",
+    "psycopg2-binary",
+    "pypdf",
+    "python-dotenv",
+    "ipykernel",
+    "nbimporter",
+    "nbformat",
+    "ragas",
+    "gradio",
+]
