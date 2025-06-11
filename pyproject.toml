@@ -20,6 +20,9 @@ dependencies = [
     "ipykernel",
     "nbimporter",
     "nbformat",
+    "nbconvert",
+    "jupyter",
+    "notebook",
     "ragas",
     "gradio",
 ]

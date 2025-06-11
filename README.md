@@ -23,4 +23,6 @@ Many Ghanaians are unaware of their legal rights, especially concerning tenancy,
     land-act-2020-act-1036,
     rent act, 1963 (act 220).
 
+    
+
 
