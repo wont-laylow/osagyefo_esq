@@ -16,11 +16,11 @@ Many Ghanaians are unaware of their legal rights, especially concerning tenancy,
 
 - ✅ Legal question-answering powered by LLMs
 - ✅ Built-in support for Ghana’s 1992 Constitution along with 6 other acts of parliament namely;
-    children’s act, 1998 (act 560)
-    criminal offences act
-    data-protection-act-2012-act-843
-    domestic_violence_act
-    land-act-2020-act-1036
-    rent act, 1963 (act 220)
+    children’s act, 1998 (act 560),
+    criminal offences act,
+    data-protection-act-2012-act-843,
+    domestic_violence_act,
+    land-act-2020-act-1036,
+    rent act, 1963 (act 220).
 
 
