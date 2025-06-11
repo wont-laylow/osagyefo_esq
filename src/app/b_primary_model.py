@@ -1,11 +1,11 @@
-from a_sub_model import rephrase_query
+from src.app.a_sub_model import rephrase_query
 from src.app.load_models import ModelParameters
 from src.app.load_embeddings import PreRag
 
 
 def chat_osagyefo(user_query, history):
     
-    prompt_path = "../prompts/main_prompt_template.txt"
+    prompt_path = "C:\\Users\\DeLL\\Desktop\\anything_py\\osagyefo_ai\\prompts\\main_prompt_template.txt"
 
     rephrased_query = rephrase_query(user_query)
     relevant_docs = PreRag.retriever.get_relevant_documents(rephrased_query)
