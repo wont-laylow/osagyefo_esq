@@ -1,0 +1,11 @@
+notebooks/
+docs/
+.venv
+tests/
+uv.lock
+pyproject.toml
+current_tasks.txt
+data/
+src/__pycache__/
+src/app/__pycache__/
+

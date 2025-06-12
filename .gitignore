@@ -2,11 +2,4 @@
 docs/
 .env
 data/
-notebooks/
-tests/
-
-# for huggingface
-uv.lock
-current_tasks.txt
-pyproject.toml
 
