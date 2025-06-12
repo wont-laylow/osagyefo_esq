@@ -3,17 +3,6 @@ langchain
 langchain-community
 sentence-transformers
 chromadb
-fastapi
-uvicorn[standard]
-sqlalchemy
-psycopg2-binary
 pypdf
 python-dotenv
-ipykernel
-nbimporter
-nbformat
-nbconvert
-jupyter
-notebook
-ragas
 gradio
