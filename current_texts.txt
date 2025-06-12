@@ -1,0 +1,3 @@
+ideas for upgrade
+
+for every relevant chunk, model should take into account the year released. compare the two and give ansers based on the most current year, if available.
