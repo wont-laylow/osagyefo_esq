@@ -4,6 +4,6 @@ langchain-community
 chromadb
 pypdf
 python-dotenv
-together
+together=1.5.13
 gunicorn
 streamlit
