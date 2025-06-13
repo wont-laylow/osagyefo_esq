@@ -1,11 +1,14 @@
 from src.app.a_sub_model import rephrase_query
 from src.app.load_models import ModelParameters
 from src.app.load_embeddings import PreRag
+import os
 
 
 def chat_osagyefo(user_query, history):
     
-    prompt_path = "C:\\Users\\DeLL\\Desktop\\anything_py\\osagyefo_ai\\prompts\\main_prompt_template.txt"
+    current_dir = os.path.dirname(__file__)
+    prompt_path = os.path.join(current_dir, "..", "..", "prompts", "main_prompt_template.txt")
+    prompt_path = os.path.abspath(prompt_path)
 
     rephrased_query = rephrase_query(user_query)
     relevant_docs = PreRag.retriever.get_relevant_documents(rephrased_query)
@@ -14,13 +17,13 @@ def chat_osagyefo(user_query, history):
     context = ''
     for doc in relevant_docs:
         context += f"[Source: {doc.metadata['file_name']}, Chapter: {doc.metadata.get('chapter_title', 'N/A')}]\n{doc.page_content}\n\n"
-
+    print("context", context)
     # loading the prompt
     with open(prompt_path, "r", encoding="utf-8") as f:
         osagyefo_system_prompt = f.read().strip()
     osagyefo_system_prompt += f"Use the following context to answer:\n{context}"
 
-
+    print(osagyefo_system_prompt)
     history = [
         {'role': h['role'], 'content': h['content'] }
         for h in history
@@ -40,6 +43,6 @@ def chat_osagyefo(user_query, history):
     history.append({"role": "user", "content": user_query})
     history.append({"role": "assistant", "content": osagyefo_response})
 
-    # print('history', history)
+    print('history', history)
     
     return osagyefo_response

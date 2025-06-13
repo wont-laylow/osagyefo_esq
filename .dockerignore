@@ -1,6 +1,6 @@
 notebooks/
 docs/
-.venv
+.venv/
 tests/
 uv.lock
 pyproject.toml

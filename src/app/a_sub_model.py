@@ -7,7 +7,9 @@ from src.app.load_models import ModelParameters
 
 def rephrase_query(user_query):
     # pdf_path = ".../docs"
-    prompt_path = "C:\\Users\\DeLL\\Desktop\\anything_py\\osagyefo_ai\\prompts\\rephaser_llm_template.txt"
+    current_dir = os.path.dirname(__file__)
+    prompt_path = os.path.join(current_dir, "..", "..", "prompts", "rephaser_llm_template.txt")
+    prompt_path = os.path.abspath(prompt_path)
     
     with open(prompt_path, "r", encoding="utf-8") as f:
         system_prompt = f.read().strip()
