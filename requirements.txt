@@ -1,9 +1,9 @@
 openai
 langchain
 langchain-community
-sentence-transformers
 chromadb
 pypdf
 python-dotenv
-gradio
+together
 gunicorn
+gradio
