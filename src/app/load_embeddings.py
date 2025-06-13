@@ -8,9 +8,8 @@ load_dotenv(override=True)
 TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
 
 
-
 class TogetherEmbeddings(Embeddings):
-    def __init__(self, model="togethercomputer/m2-bert-80M-8k-retrieval", api_key=None):
+    def __init__(self, model="togethercomputer/m2-bert-80M-32k-retrieval", api_key=None):
         self.client = openai.OpenAI(
   api_key=os.environ.get("TOGETHER_API_KEY"),
   base_url="https://api.together.xyz/v1",
