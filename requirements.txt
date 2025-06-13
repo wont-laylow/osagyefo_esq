@@ -4,7 +4,7 @@ langchain-community
 chromadb
 pypdf
 python-dotenv
-together==1.5.13
+together==1.5.11
 langchain-together
 together
 gunicorn
