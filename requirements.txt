@@ -5,5 +5,7 @@ chromadb
 pypdf
 python-dotenv
 together==1.5.13
+langchain-together
+together
 gunicorn
 streamlit
