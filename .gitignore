@@ -2,4 +2,6 @@
 docs/
 .env
 data/
+Dockerfile
+.dockerignore
 

@@ -6,4 +6,4 @@ pypdf
 python-dotenv
 together
 gunicorn
-gradio
+streamlit

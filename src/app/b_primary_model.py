@@ -4,7 +4,7 @@ from src.app.load_embeddings import PreRag
 import os
 
 
-def chat_osagyefo(user_query, history):
+def chat_osagyefo(user_query):
     
     current_dir = os.path.dirname(__file__)
     prompt_path = os.path.join(current_dir, "..", "..", "prompts", "main_prompt_template.txt")
@@ -24,13 +24,8 @@ def chat_osagyefo(user_query, history):
     osagyefo_system_prompt += f"Use the following context to answer:\n{context}"
 
     print(osagyefo_system_prompt)
-    history = [
-        {'role': h['role'], 'content': h['content'] }
-        for h in history
-        if 'role' in h and 'content' in h
-    ]
 
-    msg_to_model = [{"role": "system", "content": osagyefo_system_prompt}] + history + [{"role": "user", "content": user_query}]
+    msg_to_model = [{"role": "system", "content": osagyefo_system_prompt}, {"role": "user", "content": user_query}]
 
     model = ModelParameters.client2.chat.completions.create(
         model=ModelParameters.model_2,
@@ -40,9 +35,5 @@ def chat_osagyefo(user_query, history):
     osagyefo_response = model.choices[0].message.content
     
 
-    history.append({"role": "user", "content": user_query})
-    history.append({"role": "assistant", "content": osagyefo_response})
-
-    print('history', history)
     
     return osagyefo_response
