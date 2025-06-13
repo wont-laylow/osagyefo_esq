@@ -9,3 +9,5 @@ langchain-together
 together
 gunicorn
 streamlit
+langchain-together
+together
