@@ -15,7 +15,7 @@ for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
-# User input
+# Takes user input
 prompt = st.chat_input("Ask your legal question here...")
 
 if prompt:
